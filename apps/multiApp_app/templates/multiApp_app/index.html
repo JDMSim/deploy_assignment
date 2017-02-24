@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coarses and Users</title>
+  </head>
+  <body>
+      {%if messages%}
+      {%for message in messages%}
+          <p style='color: red'>{{message}}</p>
+        {%endfor%}
+      {%endif%}
+    <div class="body">
+        <div class="controls">
+          <a href="{%url 'courses:new_course'%}">Add New Course</a>
+          <form class="" action="{%url 'courses:bind'%}" method="post">
+            {% csrf_token %}
+            <select class="" name="user_id">
+              <option value="">Select User</option>
+              {%for user in users%}
+                <option value = "{{user.id}}">{{user.first_name}} {{user.last_name}}></option>
+              {%endfor%}
+            </select>
+            <select class="" name="course_id">
+              <option value="">Select Courses</option>
+              {%for course in courses%}
+                <option value = "{{course.id}}">{{course.title}}</option>
+              {%endfor%}
+            </select>
+            <input type="submit" value="Add User to Course">
+          </form>
+          <table border="1" style = 'width: 300px'>
+            <tr>
+              <th>Course</th>
+              <th>Title</th>
+              <th>No. of Users</th>
+              {%for binding in bindings%}
+              <tr>
+                <td>{{binding.course_no}}</td>
+                <td>{{binding.title}}</td>
+                <td>{{binding.users.all|length}}</td>
+              </tr>
+              {%endfor%}
+            </tr>
+          </table>
+          <a href="{%url 'reglog:logout'%}">< Log out</a>
+      </div>
+    </div>
+  </body>
+</html>
