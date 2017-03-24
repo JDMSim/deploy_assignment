@@ -10,4 +10,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
+      "dependencies": {
+    "angular": "^1.6.3",
+    "angular-messages": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "mongoose": "^4.9.0"
+  }
 }
