@@ -1,0 +1,14 @@
+﻿<div ng-controller="usersController">
+    <form name="loginForm">
+        <table frame="box">
+            <tr>
+                <td>
+                    <input type="text" name="username" ng-model="user.name" required minlength="3" maxlength="20"/>
+                </td>
+                <td>
+                    <input type="submit" value="Login" ng-click="login()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
