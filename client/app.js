@@ -6,8 +6,16 @@ var app = angular.module('app', ['ngRoute', 'ngMessages'])
             {
                 templateUrl:'partials/login.html'
             })
-            .when('/success',
+            .when('/dashboard',
             {
-                templateUrl:'partials/success.html'
+                templateUrl: 'partials/dashboard.html'
+            })
+            .when('/new_question',
+            {
+                templateUrl: 'partials/new_question.html'
+            })
+            .when('/play',
+            {
+                templateUrl: '/partials/play.html'
             })
     });

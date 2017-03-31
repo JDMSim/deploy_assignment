@@ -3,7 +3,7 @@ var mongoose = require('mongoose')
 var path = require('path');
 var fs = require('fs');
 
-mongoose.connect('mongodb://localhost/user');
+mongoose.connect('mongodb://localhost/Belt3');
 
 var models_path = path.join(__dirname, './../models');
 

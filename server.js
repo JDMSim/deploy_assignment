@@ -10,8 +10,8 @@ app.use(express.static(path.join(__dirname, './client')));
 app.use(express.static(path.join(__dirname, './node_modules')));
 app.use(bodyParser.json());
 
-require('./sever/config/mongoose.js');
-require('./sever/config/routes.js')(app);
+require('./server/config/mongoose.js');
+require('./server/config/routes.js')(app);
 
 app.listen(8000, function () {
     console.log('Listening on port 8000');

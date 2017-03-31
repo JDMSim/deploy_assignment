@@ -1,0 +1,29 @@
+﻿<div ng-controller="playController">
+    <p>Hi {{ currentUser.user }}!</p>
+    <p>Choose an answer for each of the question and submit the test once done.</p>
+    <p>Good luck!</p>
+    <form>
+        <div style="width:500px; border:solid; margin-bottom:10px; padding-bottom:5px;" >
+            <p>{{questions[0].question}}</p>
+            <select ng-model="my.answer1" required>
+                <option ng-repeat="answer in answers1" value="{{answer._id}}">{{answer.answer}}</option>
+            </select>
+        </div>
+        
+        <div style="width:500px; border:solid; margin-bottom:10px; padding-bottom:5px;">
+            <p>{{questions[1].question}}</p>
+            <select ng-model="my.answer2" required>
+                <option ng-repeat="answer in answers2" value="{{answer._id}}">{{answer.answer}}</option>
+            </select>
+        </div>
+       
+        <div style="width:500px; border:solid; margin-bottom:10px; padding-bottom:5px;">
+            <p>{{questions[2].question}}</p>
+            <select ng-model="my.answer3" required>
+                <option ng-repeat="answer in answers3" value="{{answer._id}}">{{answer.answer}}</option>
+            </select>
+        </div>
+        <button ng-click="cancel()">Cancel</button>
+        <input type="submit" ng-click="submit()" value="Submit" />
+    </form>
+</div>

@@ -1,0 +1,26 @@
+﻿<div ng-controller="addController">
+    <p><a href="#!/dashboard">Home</a> | <a href="#">Add a Question</a> | <a href="#" ng-click="logout()">Logout</a></p>
+    <h1>New Question</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Question:</td>
+                <td><textarea cols="50" rows="3" required minlength="15" ng-model="new.question"></textarea></td>
+            </tr>
+            <tr>
+                <td> Correct Answer:</td>
+                <td><input type="text" required ng-model="new.c_answer"/></td>
+            </tr>
+            <tr>
+                <td>Fake Answer 1:</td>
+                <td><input type="text" required ng-model="new.f_answer1"/></td>
+            </tr>
+            <tr>
+                <td>Fake Answer 2:</td>
+                <td><input type="text" required ng-model="new.f_answer2"/></td>
+            </tr>
+        </table>
+        <a href="#!/dashboard"><button>Cancel</button></a>
+        <input type="submit" ng-click="subQ()" />
+    </form>
+</div>
